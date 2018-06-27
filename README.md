@@ -1,3 +1,13 @@
+# Josh's installation instructions with additional plugins
+
+	git clone --depth=1 https://github.com/jfialkoff/vimrc.git ~/.vim_runtime
+	sh ~/.vim_runtime/install_awesome_vimrc.sh
+    cd ~/.vim_runtime/my_plugins
+    git submodule update --init --recursive
+    brew install cmake
+    cd YouCompleteMe
+    python3 ./install.py --clang-completer
+
 ![VIM](https://dnp4pehkvoo6n.cloudfront.net/43c5af597bd5c1a64eb1829f011c208f/as/Ultimate%20Vimrc.svg)
 
 # The Ultimate vimrc

@@ -1,0 +1,15 @@
+[submodule "my_plugins/vim-flake8"]
+	path = my_plugins/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
+[submodule "my_plugins/SimpylFold"]
+	path = my_plugins/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git
+[submodule "my_plugins/vim-python-pep8-indent"]
+	path = my_plugins/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent.git
+[submodule "my_plugins/YouCompleteMe"]
+	path = my_plugins/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "my_plugins/FastFold"]
+	path = my_plugins/FastFold
+	url = https://github.com/Konfekt/FastFold.git
