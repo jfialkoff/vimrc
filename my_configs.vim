@@ -1,10 +1,14 @@
 set encoding=utf-8
 set number
+
+# netrw config
+map <leader>t :Sexplore<cr>
+let g:netrw_banner = 0
+
+" Set current dir to dir of current buffer
 autocmd BufEnter * lcd %:p:h
 
 " Open NERDTree easily
-nmap <leader>t :NERDTree<cr>
-nmap <leader>r :NERDTreeFind<cr>
 
 " Set font size
 if has("mac") || has("macunix")
@@ -43,3 +47,4 @@ if 'VIRTUAL_ENV' in os.environ:
   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
   execfile(activate_this, dict(__file__=activate_this))
 EOF
+
