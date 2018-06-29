@@ -1,9 +1,25 @@
 set encoding=utf-8
 set number
 
-# netrw config
-map <leader>t :Sexplore<cr>
-let g:netrw_banner = 0
+" replacement shortcuts
+function! RepCusts() range
+    %s/\([Cc]\)ustomers/\1ompanies/g 
+    %s/\([Cc]\)ustomer/\1ompany/g
+endfunction
+command Rcusts :call RepCusts()
+
+" shortcut for Ack from project root
+cnoreabbrev ag Gcd <bar> Ack!
+
+" shortcut for ControlP
+nmap <leader>t :CtrlP<cr>
+
+" shortcuts for YCM
+nmap <leader>ycdef :YcmCompleter GoTo<cr>
+
+
+" netrw config
+set g:netrw_banner=0
 
 " Set current dir to dir of current buffer
 autocmd BufEnter * lcd %:p:h
@@ -30,6 +46,9 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix
+
+" No indentation for HTML
+au BufNewFile,BufRead *.html set textwidth=0
 
 " YouCompleteMe configuration and shortcuts
 let g:ycm_autoclose_preview_window_after_completion=1
