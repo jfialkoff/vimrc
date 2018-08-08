@@ -14,17 +14,11 @@ cnoreabbrev ag Gcd <bar> Ack!
 " shortcut for ControlP
 nmap <leader>t :CtrlP<cr>
 
-" shortcuts for YCM
-nmap <leader>ycdef :YcmCompleter GoTo<cr>
-
-
 " netrw config
-set g:netrw_banner=0
+let g:netrw_banner=0
 
 " Set current dir to dir of current buffer
 autocmd BufEnter * lcd %:p:h
-
-" Open NERDTree easily
 
 " Set font size
 if has("mac") || has("macunix")
@@ -53,9 +47,12 @@ au BufNewFile,BufRead *.html set textwidth=0
 " YouCompleteMe configuration and shortcuts
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nmap <leader>ycdef :YcmCompleter GoTo<cr>
+
 
 " Auto flake
 autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
+let g:flake8_show_quickfix=1
 
 " python with virtualenv support
 py << EOF
