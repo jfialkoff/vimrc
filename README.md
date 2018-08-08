@@ -1,5 +1,13 @@
 # Josh's installation instructions with additional plugins
 
+## If on Ubuntu, install Vim 8 first:
+
+    sudo add-apt-repository ppa:jonathonf/vim
+    sudo apt update
+    sudo apt install vim
+
+## Then install:
+
 	git clone --depth=1 https://github.com/jfialkoff/vimrc.git ~/.vim_runtime
 	sh ~/.vim_runtime/install_awesome_vimrc.sh
     cd ~/.vim_runtime/my_plugins
